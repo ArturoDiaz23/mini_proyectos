@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+:root {
+    /*propiedades btn*/
+    --md-filled-button-container-shape: 12px;
+    --md-filled-button-label-text-font: system-ui;
+    --md-sys-color-primary: #005688;
+    --md-sys-color-on-primary: #FFFFFF;
+
+    --md-sys-color-surface-container-high: #e3e9e9;
+    /*--md-fab-container-shape: 0px;*/
+    background-color: #f4fbfa;
+
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+
+    --color-disabled: #81888f;
+    --color-EAA492: #EAA492;
+    --color-F5E5DA: #F5E5DA;
+    --color-E05A47: #E05A47;
+    --color-FFF9F0: #FFF9F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: var(--md-sys-color-surface-container-high);*/
+    background: var(--color-FFF9F0);
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /* 
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-family: "Merienda", cursive;
+    font-family: "Lily Script One", system-ui;
+    font-family: "Petit Formal Script", cursive;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; */
+}
+
+.contenido {
+    min-height: 100dvh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sesion-card {
+    display: grid;
+    gap: 10px;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.btn {
+    width: stretch;
+    background-color: var(--color-E05A47);
+    color: var(--md-sys-color-on-primary);
+    border-radius: .5rem;
+    padding: .25rem .8rem;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--color-F5E5DA);
+    color: var(--color-E05A47);
+    border-color: var(--color-E05A47) 1px solid;
+}
+
+.format_content_card {
+    width: min(100%, 30rem);
+    margin-bottom: 1.5rem;
+}
+
+.img_logo {
+    width: 350px;
+    margin: auto;
+    margin-bottom: -130px;
+    filter: brightness(0) saturate(100%) invert(51%) sepia(31%) saturate(1306%) hue-rotate(319deg) brightness(88%) contrast(100%);
+}
