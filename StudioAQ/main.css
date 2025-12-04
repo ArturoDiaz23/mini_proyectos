@@ -19,6 +19,8 @@
     --success: #198754;
     --warning: #ffc107;
     --danger: #dc3545;
+    --info: #0dcaf0;
+    --black: #131313;
 
     --color-disabled: #81888f;
     --color-EAA492: #EAA492;
@@ -36,9 +38,10 @@
 body {
     /*background: var(--md-sys-color-surface-container-high);*/
     background: var(--color-FFF9F0);
-    font-family: "Oleo Script", system-ui;
+
+    /* font-family: "Oleo Script", system-ui;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
     /* 
     font-family: "Playwrite HR Lijeva", cursive;
     font-family: "Merienda", cursive;
@@ -67,13 +70,19 @@ body {
     font-size: 1.5rem;
 }
 
+.grid_items {
+    display: grid;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
 .btn {
     width: stretch;
     background-color: var(--color-E05A47);
     color: var(--md-sys-color-on-primary);
     border-radius: .5rem;
     padding: .25rem .8rem;
-    font-weight: 500;
+
 }
 
 .btn:hover {
@@ -88,8 +97,32 @@ body {
 }
 
 .img_logo {
+    z-index: 1;
     width: 350px;
     margin: auto;
-    margin-bottom: -130px;
+    margin-bottom: -120px;
     filter: brightness(0) saturate(100%) invert(51%) sepia(31%) saturate(1306%) hue-rotate(319deg) brightness(88%) contrast(100%);
+
+}
+
+form {
+    z-index: 0
+}
+
+.flex_items {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#cambiar_btn {
+    color: var(--md-sys-color-primary);
+    cursor: pointer;
+    width: fit-content;
+    font-size: 1rem;
+    place-self: end;
+}
+
+.hidden {
+    display: none;
 }

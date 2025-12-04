@@ -48,6 +48,16 @@ form {
     gap: 20px;
 }
 
+.btn_float {
+    background-color: red;
+    position: fixed;
+    bottom: 40px;
+    right: calc(50% / 2);
+    margin: auto;
+    z-index: 999;
+
+}
+
 md-fab {
     position: fixed;
     bottom: 40px;
