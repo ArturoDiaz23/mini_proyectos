@@ -108,7 +108,6 @@ const add_icon_url = (url) => {
     const p = new URLPattern(url);
     icono = p.hostname.includes('instagram') ? 'I' : 'T';
     return icono === 'I' ? 'fa-instagram' : 'fa-threads';
-
 }
 
 //carga datos de la DB

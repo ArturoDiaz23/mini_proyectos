@@ -49,12 +49,16 @@ form {
 }
 
 .btn_float {
-    background-color: red;
-    position: fixed;
-    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 20px;
+
+    /* position: fixed;
     right: calc(50% / 2);
-    margin: auto;
-    z-index: 999;
+    bottom: 40px;
+    z-index: 999; */
 
 }
 
