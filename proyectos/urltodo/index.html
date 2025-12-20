@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
     <!--Material desing-->
@@ -40,18 +41,6 @@
         <div class="hidden" id="id_user"></div>
     </div>
 
-    <!--flotante-->
-    <div class="hidden btn_float" id="btn_add">
-        <md-filled-tonal-button id="antes">Anterior</md-filled-tonal-button>
-        <md-filled-button>
-            <span class="material-symbols-outlined">add</span>
-        </md-filled-button>
-        <md-filled-tonal-button id="despues">Siguiente</md-filled-tonal-button>
-    </div>
-    <!--     
-    <md-fab aria-label="Add" id="btn_add" class="hidden">
-        <md-icon slot="icon">Add</md-icon>
-    </md-fab> -->
     <!-- ----------------------------------------------------------->
     <!--     dialog insert    -->
     <div>
@@ -91,7 +80,7 @@
 
     <!--Contenido-->
     <div class="content_list hidden" id="contenido_url">
-        <h1 class="md-typescale-display-medium">ListUrl</h1>
+        <h1 class="--md-sys-typescale-title-medium-font">Cuentas</h1>
         <md-divider></md-divider>
         <!-- Contenido de url-->
         <md-list id="list" style="background-color: white;">
@@ -104,9 +93,22 @@
         </nav>
     </div>
 
+     <!--flotante-->
+    <div class="hidden btn_float" id="btn_add">
+        <md-filled-tonal-button id="antes">Anterior</md-filled-tonal-button>
+        <md-filled-button>
+            <span class="material-symbols-outlined">add</span>
+        </md-filled-button>
+        <md-filled-tonal-button id="despues">Siguiente</md-filled-tonal-button>
+    </div>
+    <!--     
+    <md-fab aria-label="Add" id="btn_add" class="hidden">
+        <md-icon slot="icon">Add</md-icon>
+    </md-fab> -->
 
     <template id="template">
         <md-list-item>
+            <i class="fa-brands "></i>
             <a target="_blank"></a>
             <!-- <img slot="start" style="width: 56px"> -->
             <span slot="trailing-supporting-text" class="material-symbols-outlined btn_icon btn_delete">

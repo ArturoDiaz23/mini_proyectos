@@ -40,7 +40,7 @@ export const remove_error = (parent) => {
 export const toast = (msn, type) => {
     Toastify({
         text: msn,
-        duration: 4000,
+        duration: 3000,
         gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover

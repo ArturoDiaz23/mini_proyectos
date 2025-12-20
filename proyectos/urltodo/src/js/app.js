@@ -102,6 +102,15 @@ async function loading_prev() {
     }
 }
 
+//funcion para agregar icono
+const add_icon_url = (url) => {
+    let icono = '';
+    const p = new URLPattern(url);
+    icono = p.hostname.includes('instagram') ? 'I' : 'T';
+    return icono === 'I' ? 'fa-instagram' : 'fa-threads';
+
+}
+
 //carga datos de la DB
 const render_data = (array) => {
     list.replaceChildren();
@@ -109,6 +118,7 @@ const render_data = (array) => {
     setTimeout(() => {
         list.replaceChildren(); // Limpiar el contenido previo de la lista
         array.forEach(element => {
+            template_list.querySelector('i').classList.add(add_icon_url(element.url));
             template_list.querySelector('a').setAttribute('href', element.url);
             template_list.querySelector('a').textContent = element.nombre;
             // template_list.querySelector('img').setAttribute('src', element.image);
@@ -159,6 +169,7 @@ document.getElementById('form-id').addEventListener('submit', (e) => {
     }
 });
 
+//funcion para agregar nueva url
 async function add_newUrl(url, nombre) {
     try {
         const items = { url: url, nombre: nombre }
@@ -170,12 +181,14 @@ async function add_newUrl(url, nombre) {
     }
 }
 
+// Autocompletar nombre de perfil al ingresar url
 url_input.addEventListener('input', () => {
     const p = new URLPattern(url_input.value);
     name_input.value = p.pathname.slice(1).replaceAll('_', '').trim();
 
 });
 
+//limpiar campos al dar click al icono de borrar
 document.getElementById('icon-bottom').addEventListener('click', () => {
     url_input.value = ''; name_input.value = '';
 });
@@ -194,6 +207,7 @@ list.addEventListener('click', e => {
     }
 });
 
+//funcion para obtener datos a confirmar
 const data_to_confirm = data_info => {
     const data_items = data_info.querySelector('a').textContent;
     return data_items;
