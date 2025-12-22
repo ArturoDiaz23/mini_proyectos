@@ -106,7 +106,10 @@ async function loading_prev() {
 const add_icon_url = (url) => {
     let icono = '';
     const p = new URLPattern(url);
-   return icono = p.hostname === 'www.threads.com' ? 'fa-instagram' : 'fa-threads';
+if(p.hostname === "www.instagram.com"){
+ return icono = 'fa-instagram';
+}else{
+  return icono = 'fa-threads';
 }
 
 //carga datos de la DB
