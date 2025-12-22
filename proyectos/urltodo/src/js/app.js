@@ -104,13 +104,14 @@ async function loading_prev() {
 
 //funcion para agregar icono
 const add_icon_url = (url) => {
-    let icono = '';
+    const icono = '';
     const p = new URLPattern(url);
 if(p.hostname === "www.instagram.com"){
  return icono = 'fa-instagram';
 }else{
   return icono = 'fa-threads';
 }
+return icono;
 
 //carga datos de la DB
 const render_data = (array) => {
